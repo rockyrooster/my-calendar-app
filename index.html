@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendar</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="calendar-app">
+    <header class="calendar-header">
+      <button id="prev-month" aria-label="Previous month">&#8249;</button>
+      <h1 id="month-year-display"></h1>
+      <button id="next-month" aria-label="Next month">&#8250;</button>
+      <button id="dark-mode-toggle" aria-label="Toggle dark mode">&#9790;</button>
+    </header>
+    <div class="calendar-grid">
+      <div class="week-label">Wk</div>
+      <div class="day-label weekend">Sun</div>
+      <div class="day-label">Mon</div>
+      <div class="day-label">Tue</div>
+      <div class="day-label">Wed</div>
+      <div class="day-label">Thu</div>
+      <div class="day-label">Fri</div>
+      <div class="day-label weekend">Sat</div>
+      <div id="calendar-days"></div>
+    </div>
+    <div id="today-info" class="today-info"></div>
+    <div id="day-panel" class="day-panel">
+      <div class="day-panel-header">
+        <h2 id="selected-date-display"></h2>
+        <button id="close-panel" aria-label="Close">&times;</button>
+      </div>
+      <div id="events-list" class="events-list"></div>
+      <form id="add-event-form" class="add-event">
+        <input type="text" id="event-input" placeholder="Add an event..." autocomplete="off" />
+        <button type="submit">+</button>
+      </form>
+    </div>
+    <footer class="calendar-footer">
+      <button id="today-button">Today</button>
+    </footer>
+  </div>
+  <script src="app.js" defer></script>
+</body>
+</html>
